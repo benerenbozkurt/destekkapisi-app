@@ -14,6 +14,7 @@ export default defineConfig({
         article3: 'esim-kumar-oynuyor-ne-yapmaliyim.html',
         article4: 'kumar-borcundan-kurtulma-yollari.html',
         test: 'kumar-bagimliligi-testi.html',
+        simulator: 'borc-odeme-simulatoru.html',
         privacy: 'privacy-policy.html'
       }
     }

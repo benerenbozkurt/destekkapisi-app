@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="tr" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Kumar Borcu Ödeme Simülatörü | Destek Kapısı</title>
+    <meta name="description" content="Kumar veya iddaa yüzünden biriken borçlarınızı ne zaman sıfırlayabileceğinizi interaktif simülatörümüzle Türkiye'de ilk defa anında hesaplayın." />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CH8PVVLPQR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-CH8PVVLPQR');
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="/src/style.css" rel="stylesheet">
+  </head>
+  <body class="bg-[#0f172a] text-slate-200 font-['Inter'] antialiased selection:bg-blue-500/30 selection:text-white flex flex-col min-h-screen">
+    
+    <!-- Header -->
+    <header class="sticky top-0 z-40 w-full glass">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <a href="/index.html" class="flex items-center gap-3">
+            <img class="h-10 w-10 md:h-12 md:w-12 rounded-xl object-cover" src="/destek_kapisi_logo_1773825609163.png" alt="Logo" />
+            <span class="text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-teal-300">Destek Kapısı</span>
+          </a>
+          <a href="/index.html#download" class="inline-flex items-center justify-center px-6 py-2.5 rounded-2xl text-white bg-blue-600 hover:bg-blue-700 shadow-[0_0_15px_rgba(37,99,235,0.4)] transition-all font-medium text-sm">Uygulamayı İndir</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-grow flex flex-col items-center justify-center py-12 relative z-10 w-full">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        
+        <div class="text-center mb-10">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-emerald-500/10 text-emerald-400 font-bold text-xs mb-4 border border-emerald-500/20 uppercase tracking-wider">İnteraktif Araç</span>
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">Borç Eritme Simülatörü</h1>
+          <p class="text-slate-400 max-w-2xl mx-auto text-lg">Hiçbir borç sonsuza dek sürmez. Finansal kurtuluş haritanızı çizmek ve özgürlük tarihinizi öğrenmek için aşağıya bilgileri girin.</p>
+        </div>
+
+        <div class="grid lg:grid-cols-5 gap-8 bg-slate-900/40 p-2 sm:p-4 rounded-[3rem] border border-slate-800/60 shadow-2xl relative overflow-hidden backdrop-blur-sm">
+          
+          <!-- Background glow -->
+          <div class="absolute -top-40 -left-40 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
+
+          <!-- Input Column -->
+          <div class="lg:col-span-2 glass p-6 sm:p-8 rounded-[2.5rem] relative z-10 shadow-lg border-2 border-slate-700/50">
+            <h2 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" /></svg>
+              Durumunuz
+            </h2>
+            
+            <form id="calculator-form" class="space-y-6">
+              
+              <div>
+                <label class="block text-sm font-semibold text-slate-300 mb-2">Toplam Borcunuz (TL)</label>
+                <div class="relative">
+                  <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                    <span class="text-slate-500 font-bold">₺</span>
+                  </div>
+                  <input type="number" id="principal" value="250000" min="100" class="w-full bg-slate-900/80 border border-slate-700 text-white rounded-xl py-3 pl-10 pr-4 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors font-medium text-lg" placeholder="Örn: 100000">
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-sm font-semibold text-slate-300 mb-2">Aylık Ödeyebileceğiniz Maksimum Tutar (TL)</label>
+                <div class="relative">
+                  <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                    <span class="text-slate-500 font-bold">₺</span>
+                  </div>
+                  <input type="number" id="payment" value="15000" min="100" class="w-full bg-slate-900/80 border border-slate-700 text-white rounded-xl py-3 pl-10 pr-4 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors font-medium text-lg" placeholder="Örn: 5000">
+                </div>
+                <p class="text-xs text-slate-500 mt-2">Masraflardan artan, borca ayırabileceğiniz net tutar.</p>
+              </div>
+
+              <div>
+                <label class="block text-sm font-semibold text-slate-300 mb-2">Yıllık Ortalama Faiz Oranı (%)</label>
+                <div class="relative">
+                  <div class="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none">
+                    <span class="text-slate-500 font-bold">%</span>
+                  </div>
+                  <input type="number" id="interest" value="45" min="0" step="0.1" class="w-full bg-slate-900/80 border border-slate-700 text-white rounded-xl py-3 pl-4 pr-10 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors font-medium text-lg" placeholder="Örn: 30">
+                </div>
+                <p class="text-xs text-slate-500 mt-2">Krediler veya nakit avanslar için (Yoksa 0 yazın).</p>
+              </div>
+
+            </form>
+          </div>
+
+          <!-- Output Column -->
+          <div class="lg:col-span-3 flex flex-col justify-center relative p-2 sm:p-6 h-full">
+            <div id="result-container" class="glass p-8 sm:p-12 rounded-[2.5rem] border-2 border-emerald-500/50 text-center relative overflow-hidden transition-all duration-500 h-full flex flex-col justify-center min-h-[400px]">
+              
+              <!-- Success State -->
+              <div id="success-state" class="relative z-10 transition-opacity duration-300">
+                <div class="w-20 h-20 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center mx-auto mb-6 scale-100 animate-bounce transition-transform">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                </div>
+                <h3 class="text-slate-300 text-lg sm:text-xl mb-2 font-medium">Büyük Gün Yaklaşıyor</h3>
+                <div class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300 mb-6 drop-shadow-sm pb-2">
+                  <span id="finish-date" class="block">Mayıs 2027</span>
+                </div>
+                <p class="text-lg text-slate-300 mb-8 max-w-md mx-auto leading-relaxed">
+                  Eğer bugün oynamayı tamamen bırakır ve plana sadık kalırsanız tam <strong id="total-months" class="text-white">24 ay</strong> sonra bu kabus bitecek ve borcunuz <strong>SIFIRLANACAK</strong>!
+                </p>
+                <a href="/index.html#download" class="inline-flex py-4 px-8 bg-white text-emerald-900 font-bold rounded-2xl hover:bg-slate-100 transition-transform hover:-translate-y-1 shadow-[0_0_20px_rgba(255,255,255,0.3)]">
+                  İyileşme Sürecini Başlat
+                </a>
+              </div>
+
+              <!-- Warning State (Hidden initially) -->
+              <div id="warning-state" class="hidden relative z-10">
+                <div class="w-20 h-20 bg-red-500/20 text-red-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-4">Tehlikeli Gidişat</h3>
+                <p class="text-lg text-slate-300 max-w-md mx-auto leading-relaxed">
+                  Girdiğiniz aylık ödeme miktarı, borcunuzun sadece aylık faizini bile karşılamıyor. Matematiksel olarak <span class="text-red-400 font-bold">borcunuz asla bitmeyecek ve büyümeye devam edecek.</span>
+                </p>
+                <div class="mt-8 p-4 bg-red-900/30 rounded-xl border border-red-500/30">
+                  <p class="text-sm font-medium text-red-300">Tavsiye: Aylık ödemenizi artırmak için yaşam standartlarınızı kısmalı veya dışarıdan finansal bir destek bulmalısınız.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-16 max-w-3xl mx-auto rounded-[2rem] overflow-hidden shadow-2xl relative border border-slate-700/50 group">
+          <div class="absolute inset-0 bg-blue-900/40 z-10"></div>
+          <img src="/borc_simulator_gorsel.png" alt="Finansal Kurtuluş" class="w-full h-80 object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" />
+          <div class="absolute inset-0 z-20 flex flex-col items-center justify-center text-center p-6">
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-white mb-3 drop-shadow-lg">Bir Gecede Kaybettin,<br>Ama Zamanla Kazanacaksın.</h3>
+            <p class="text-slate-200 font-medium drop-shadow-md">Kendine sadece zaman ver. Biz senin yanındayız.</p>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- Footer snippet -->
+    <footer class="bg-slate-900 border-t border-slate-800 pt-8 pb-8 text-center mt-auto z-10 w-full relative">
+      <p class="text-sm text-slate-500">&copy; 2026 Destek Kapısı.</p>
+    </footer>
+
+    <!-- Floating YEDAM Button -->
+    <a href="tel:115" class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-red-600 hover:bg-red-700 text-white rounded-full shadow-[0_0_20px_rgba(220,38,38,0.5)] hover:shadow-[0_0_30px_rgba(220,38,38,0.8)] transition-all duration-300 hover:scale-110 group" title="YEDAM 115 Ücretsiz Destek Hattı">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 sm:h-8 sm:w-8 animate-pulse" viewBox="0 0 20 20" fill="currentColor">
+        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.042 11.042 0 005.115 5.115l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+      </svg>
+      <span class="absolute right-full mr-4 bg-slate-800 text-white text-sm px-3 py-1.5 rounded-lg opacity-0 whitespace-nowrap group-hover:opacity-100 transition-opacity font-medium pointer-events-none hidden sm:block">
+        Umut var, yardım iste.<br>YEDAM 115
+      </span>
+    </a>
+
+    <!-- Calculator Logic Script -->
+    <script>
+      const inputPrincipal = document.getElementById('principal');
+      const inputPayment = document.getElementById('payment');
+      const inputInterest = document.getElementById('interest');
+      const totalMonthsEl = document.getElementById('total-months');
+      const finishDateEl = document.getElementById('finish-date');
+      const resultContainer = document.getElementById('result-container');
+      const successState = document.getElementById('success-state');
+      const warningState = document.getElementById('warning-state');
+
+      const monthsTr = ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"];
+
+      function calculate() {
+        let principal = parseFloat(inputPrincipal.value) || 0;
+        let payment = parseFloat(inputPayment.value) || 0;
+        let annualInterestRate = parseFloat(inputInterest.value) || 0;
+
+        // Reset states
+        if (principal <= 0 || payment <= 0) {
+          showNone();
+          return;
+        }
+
+        let isWarning = false;
+        let monthsToPayoff = 0;
+
+        if (annualInterestRate === 0) {
+          monthsToPayoff = Math.ceil(principal / payment);
+        } else {
+          // Monthly interest rate calculation
+          // Example: 45% annual -> 0.45 / 12 = 0.0375 monthly
+          const r = (annualInterestRate / 100) / 12;
+
+          // If payment is less than or equal to monthly interest, debt grows forever
+          if (payment <= principal * r) {
+            isWarning = true;
+          } else {
+            // Formula: N = -log(1 - (r*P)/A) / log(1 + r)
+            const num = Math.log(1 - (r * principal) / payment);
+            const den = Math.log(1 + r);
+            monthsToPayoff = Math.ceil(-num / den);
+          }
+        }
+
+        if (isWarning) {
+          showWarning();
+        } else {
+          showSuccess(monthsToPayoff);
+        }
+      }
+
+      function showNone() {
+        successState.classList.add('hidden');
+        warningState.classList.add('hidden');
+        resultContainer.className = "glass p-8 sm:p-12 rounded-[2.5rem] border-2 border-slate-700/50 text-center relative overflow-hidden transition-all duration-500 h-full flex flex-col justify-center min-h-[400px]";
+      }
+
+      function showWarning() {
+        successState.classList.add('hidden');
+        warningState.classList.remove('hidden');
+        resultContainer.className = "glass p-8 sm:p-12 rounded-[2.5rem] border-2 border-red-500/50 bg-red-900/10 text-center relative overflow-hidden transition-all duration-500 h-full flex flex-col justify-center min-h-[400px]";
+      }
+
+      function showSuccess(months) {
+        warningState.classList.add('hidden');
+        successState.classList.remove('hidden');
+        resultContainer.className = "glass p-8 sm:p-12 rounded-[2.5rem] border-2 border-emerald-500/50 text-center relative overflow-hidden transition-all duration-500 h-full flex flex-col justify-center min-h-[400px]";
+
+        totalMonthsEl.innerText = \`\${months} ay\`;
+
+        // Calculate future date
+        const today = new Date();
+        const futureDate = new Date(today.setMonth(today.getMonth() + months));
+        
+        const m = monthsTr[futureDate.getMonth()];
+        const y = futureDate.getFullYear();
+        finishDateEl.innerText = \`\${m} \${y}\`;
+      }
+
+      inputPrincipal.addEventListener('input', calculate);
+      inputPayment.addEventListener('input', calculate);
+      inputInterest.addEventListener('input', calculate);
+
+      // Initial calculate on load
+      calculate();
+    </script>
+  </body>
+</html>
