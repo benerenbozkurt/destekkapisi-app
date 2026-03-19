@@ -10,6 +10,7 @@ export default defineConfig({
       input: {
         main: 'index.html',
         article1: 'kumar-bagimliligindan-kurtulmanin-5-adimi.html',
+        test: 'kumar-bagimliligi-testi.html',
         privacy: 'privacy-policy.html'
       }
     }
