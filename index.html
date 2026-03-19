@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="tr" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destek Kapısı - Yalnız Değilsin</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="/src/style.css" rel="stylesheet">
+  </head>
+  <body class="bg-[#0f172a] text-slate-200 font-['Inter'] antialiased selection:bg-blue-500/30 selection:text-white flex flex-col min-h-screen">
+    
+    <!-- YEDAM Banner (Top Bar) -->
+    <div class="bg-gradient-to-r from-orange-600 to-red-600 text-white px-4 py-3 relative z-50 shadow-lg">
+      <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-sm sm:text-base">
+        <div class="flex items-center gap-2 font-medium">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 animate-pulse" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.042 11.042 0 005.115 5.115l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+          </svg>
+          YEDAM Ücretsiz Destek Hattı: Yalnız değilsin, hemen destek al.
+        </div>
+        <a href="tel:115" class="bg-white/20 hover:bg-white/30 transition-colors backdrop-blur-sm px-4 py-1.5 rounded-full font-bold flex items-center gap-2">
+          115'i Ara
+        </a>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-40 w-full glass">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <div class="flex-shrink-0">
+            <a href="#" class="flex items-center gap-3">
+              <img class="h-10 w-10 md:h-12 md:w-12 rounded-xl object-cover" src="/destek_kapisi_logo_1773825609163.png" alt="Destek Kapısı Logo" />
+              <span class="text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-teal-300">
+                Destek Kapısı
+              </span>
+            </a>
+          </div>
+          <div>
+            <a href="#download" class="inline-flex items-center justify-center px-6 py-2.5 border border-transparent text-sm font-medium rounded-2xl text-white bg-blue-600 hover:bg-blue-700 shadow-[0_0_15px_rgba(37,99,235,0.4)] hover:shadow-[0_0_20px_rgba(37,99,235,0.6)] transition-all duration-300">
+              Uygulamayı İndir
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-grow">
+      
+      <!-- Hero Section -->
+      <section class="relative pt-20 pb-32 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+          <div class="absolute top-0 right-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl opacity-50"></div>
+          <div class="absolute bottom-10 left-1/3 w-72 h-72 bg-teal-500/10 rounded-full blur-3xl opacity-50"></div>
+        </div>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div class="text-center max-w-3xl mx-auto">
+            <span class="text-blue-400 font-semibold tracking-wide uppercase text-sm mb-4 block">Yeni Bir Başlangıç</span>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight mb-6 leading-tight">
+              Yalnız Değilsin,<br/>
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-300">Yeni Bir Sayfa Aç.</span>
+            </h1>
+            <p class="mt-4 text-lg sm:text-xl text-slate-300 mb-10 leading-relaxed font-light">
+              Kumar bağımlılığı ile mücadelende yalnız değilsin. İçindeki gücü yeniden keşfetmek ve temiz bir hayata adım atmak için Destek Kapısı hep yanında.
+            </p>
+            <div id="download" class="flex flex-col sm:flex-row justify-center items-center gap-4">
+              <!-- Google Play Button -->
+              <a href="#" class="w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-4 border border-slate-600 rounded-2xl bg-slate-800/80 hover:bg-slate-700 hover:border-slate-500 transition-all group glass">
+                <svg viewBox="0 0 24 24" class="h-8 w-8 text-white group-hover:scale-110 transition-transform" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.986 1.986 0 0 1-.585-1.42V3.234a1.983 1.983 0 0 1 .584-1.42z"/><path d="M14.5 12.708l3.123 3.123-11.43 6.6A1.979 1.979 0 0 1 4.316 22.9l10.184-10.192z"/><path d="M18.445 8.761l-3.945 2.228L4.316 1.1a1.98 1.98 0 0 1 1.877.469l12.252 7.192z"/><path d="M18.445 8.761a2.001 2.001 0 0 1 0 3.478l-3.945 2.228 1.54 1.54 4.095-2.364a2 2 0 0 0 0-3.464l-4.095-2.364-1.54 1.54 3.945 2.228z"/></svg>
+                <div class="text-left">
+                  <div class="text-xs text-slate-400 font-medium">Hemen İndir</div>
+                  <div class="text-lg font-bold text-white leading-5">Google Play</div>
+                </div>
+              </a>
+              <!-- App Store Button -->
+              <a href="#" class="w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-4 border border-slate-600 rounded-2xl bg-slate-800/80 hover:bg-slate-700 hover:border-slate-500 transition-all group glass">
+                <svg viewBox="0 0 384 512" class="h-8 w-8 text-white group-hover:scale-110 transition-transform" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+                <div class="text-left">
+                  <div class="text-xs text-slate-400 font-medium">App Store'dan</div>
+                  <div class="text-lg font-bold text-white leading-5">İndir</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bilgilendirme Alanı -->
+      <section class="py-24 bg-slate-900/50 border-y border-slate-800 relative z-10 backdrop-blur-md">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-white mb-4">Farkında Ol, Kontrolü Geri Al</h2>
+            <p class="text-slate-400 max-w-2xl mx-auto">Kumar bağımlılığı beynin ödül sistemini etkileyerek gizlice büyüyen bir sorundur. Ancak bu döngüyü kırmak sadece senin elinde.</p>
+          </div>
+          <div class="grid md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="glass p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300">
+              <div class="w-14 h-14 bg-red-500/20 text-red-400 rounded-2xl flex items-center justify-center mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+              </div>
+              <h3 class="text-xl font-semibold text-white mb-3">Dürtüyle Yüzleş</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">Kumar oynama isteği birden gelebilir. Bu anlarda duraklamak ve mantıklı kararlar vermek bağımlılığı yenebilmenin ilk şartıdır.</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="glass p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300">
+              <div class="w-14 h-14 bg-blue-500/20 text-blue-400 rounded-2xl flex items-center justify-center mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <h3 class="text-xl font-semibold text-white mb-3">Temiz Günlerini Takip Et</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">Uygulamamız ile her temiz gün senin en büyük zaferin olacak. Gelişimini gördükçe motivasyonunu kaybetmeyeceksin.</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="glass p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300">
+              <div class="w-14 h-14 bg-emerald-500/20 text-emerald-400 rounded-2xl flex items-center justify-center mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+              </div>
+              <h3 class="text-xl font-semibold text-white mb-3">Zihnini Oyala</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">Odaklanma oyunları sayesinde nöroplastisiteyi destekle. Aklındaki kumar düşüncesini zihin oyunlarıyla dağıtabilirsin.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Uygulama Özellikleri -->
+      <section class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+          <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl opacity-50"></div>
+        </div>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-white mb-4">Sürecini En İyi Şekilde Yönet</h2>
+            <p class="text-slate-400 max-w-2xl mx-auto">Modern tasarımı ve hayat kurtaran özellikleriyle Destek Kapısı uygulamasını keşfet.</p>
+          </div>
+          
+          <div class="flex flex-wrap justify-center gap-8 md:gap-12">
+            <!-- Mockup 1 -->
+            <div class="w-64 md:w-72 rounded-[2.5rem] p-2 bg-slate-800/80 border-[6px] border-slate-700/50 shadow-2xl relative glass group hover:-translate-y-4 transition-transform duration-500">
+              <div class="absolute top-0 inset-x-0 h-6 bg-black rounded-b-3xl w-32 mx-auto z-20"></div>
+              <img src="/screenshot_warning_1773834736664.png" alt="Acil Uyarı Ekranı" class="rounded-[2rem] w-full h-auto object-cover opacity-90 group-hover:opacity-100 transition-opacity" />
+              <p class="text-center mt-6 mb-4 text-sm font-medium text-slate-300">Dürtü Anında Hızlı Müdahale</p>
+            </div>
+            
+            <!-- Mockup 2 -->
+            <div class="w-64 md:w-72 rounded-[2.5rem] p-2 bg-slate-800/80 border-[6px] border-slate-700/50 shadow-2xl relative glass md:mt-12 group hover:-translate-y-4 transition-transform duration-500">
+              <div class="absolute top-0 inset-x-0 h-6 bg-black rounded-b-3xl w-32 mx-auto z-20"></div>
+              <img src="/screenshot_dashboard_1773825625026.png" alt="Panel Ekranı" class="rounded-[2rem] w-full h-auto object-cover opacity-90 group-hover:opacity-100 transition-opacity" />
+              <p class="text-center mt-6 mb-4 text-sm font-medium text-slate-300">Temiz Gün Sayacı</p>
+            </div>
+            
+            <!-- Mockup 3 -->
+            <div class="w-64 md:w-72 rounded-[2.5rem] p-2 bg-slate-800/80 border-[6px] border-slate-700/50 shadow-2xl relative glass group hover:-translate-y-4 transition-transform duration-500">
+              <div class="absolute top-0 inset-x-0 h-6 bg-black rounded-b-3xl w-32 mx-auto z-20"></div>
+              <img src="/screenshot_focus_game_1773825639107.png" alt="Odaklanma Oyunu" class="rounded-[2rem] w-full h-auto object-cover opacity-90 group-hover:opacity-100 transition-opacity" />
+              <p class="text-center mt-6 mb-4 text-sm font-medium text-slate-300">Dikkat Dağıtma Egzersizleri</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-800 pt-16 pb-8">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-3 gap-12 mb-12">
+          <div>
+            <div class="flex items-center gap-3 mb-6">
+              <img class="h-8 w-8 rounded-lg" src="/destek_kapisi_logo_1773825609163.png" alt="Destek Kapısı Logo" />
+              <span class="text-lg font-bold text-white">Destek Kapısı</span>
+            </div>
+            <p class="text-sm text-slate-400 leading-relaxed mb-6">
+              Kumar bağımlılığı ile mücadelenizde umut ve güç bulacağınız tamamen anonim ve güvenilir yardım platformu.
+            </p>
+          </div>
+          <div class="md:text-center">
+            <h4 class="text-white font-semibold mb-6">Hızlı Bağlantılar</h4>
+            <ul class="space-y-4 text-sm text-slate-400">
+              <li><a href="#" class="hover:text-white transition-colors">Ana Sayfa</a></li>
+              <li><a href="#download" class="hover:text-white transition-colors">Uygulamayı İndir</a></li>
+              <li><a href="tel:115" class="hover:text-red-400 transition-colors">YEDAM 115 Araması</a></li>
+            </ul>
+          </div>
+          <div class="md:text-right">
+            <h4 class="text-white font-semibold mb-6">Yasal</h4>
+            <ul class="space-y-4 text-sm text-slate-400">
+              <li><a href="/privacy-policy.html" class="hover:text-white transition-colors">Gizlilik Politikası (Privacy Policy)</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Kullanım Şartları</a></li>
+              <li><a href="mailto:iletisim@destekkapisi.app" class="hover:text-white transition-colors">iletisim@destekkapisi.app</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="pt-8 border-t border-slate-800 text-center text-sm text-slate-500">
+          <p>&copy; 2026 Destek Kapısı. Tüm Hakları Saklıdır.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
