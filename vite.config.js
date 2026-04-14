@@ -15,6 +15,8 @@ export default defineConfig({
         article4: 'kumar-borcundan-kurtulma-yollari.html',
         article5: 'yasadisi-bahis-bagimliligi-ve-kurtulma-yollari.html',
         article6: 'kumar-oynama-durtusuyle-basa-cikma-yontemleri.html',
+        article7: 'kumarbaz-yakinlarina-tavsiyeler.html',
+        article8: 'kumar-bagimliliginda-profesyonel-destek-gerekli-mi.html',
         test: 'kumar-bagimliligi-testi.html',
         simulator: 'borc-odeme-simulatoru.html',
         privacy: 'privacy-policy.html'
